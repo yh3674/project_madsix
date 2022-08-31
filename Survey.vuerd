@@ -3,8 +3,8 @@
     "version": "2.2.11",
     "width": 2000,
     "height": 2000,
-    "scrollTop": -278,
-    "scrollLeft": -364,
+    "scrollTop": -272,
+    "scrollLeft": 0,
     "zoomLevel": 0.9,
     "show": {
       "tableComment": true,
@@ -95,9 +95,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 966.335,
-          "top": 950.7782,
-          "zIndex": 2,
+          "left": 531.8907,
+          "top": 939.6672,
+          "zIndex": 4,
           "widthName": 71.97021484375,
           "widthComment": 60
         },
@@ -157,9 +157,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 1520.6654,
-          "top": 393.8892,
-          "zIndex": 1,
+          "left": 1128.4448,
+          "top": 399.4447,
+          "zIndex": 5,
           "widthName": 61.66796875,
           "widthComment": 60
         },
@@ -219,9 +219,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 414.3317,
-          "top": 396.5559,
-          "zIndex": 3,
+          "left": 20.9991,
+          "top": 401.0003,
+          "zIndex": 1,
           "widthName": 72.47802734375,
           "widthComment": 60
         },
@@ -281,9 +281,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 966.5553,
-          "top": 664.2211,
-          "zIndex": 4,
+          "left": 532.1114,
+          "top": 650.8879,
+          "zIndex": 3,
           "widthName": 114.4296875,
           "widthComment": 60
         },
@@ -366,9 +366,9 @@
         ],
         "ui": {
           "active": false,
-          "left": 983.5555,
-          "top": 385.3334,
-          "zIndex": 5,
+          "left": 545.7784,
+          "top": 390.8889,
+          "zIndex": 2,
           "widthName": 171.04443359375,
           "widthComment": 60
         },
@@ -392,8 +392,8 @@
           "columnIds": [
             "964edfc3-2763-493d-bd29-2baaffb6ece8"
           ],
-          "x": 1171.67728515625,
-          "y": 950.7782,
+          "x": 737.23298515625,
+          "y": 939.6672,
           "direction": "top"
         },
         "end": {
@@ -401,8 +401,8 @@
           "columnIds": [
             "28eb6b1f-c0eb-4e39-8fa3-da4421bec58a"
           ],
-          "x": 1171.89758515625,
-          "y": 774.2211,
+          "x": 737.45368515625,
+          "y": 760.8879,
           "direction": "bottom"
         },
         "constraintName": "fk_responses_to_question_and_answers",
@@ -418,8 +418,8 @@
           "columnIds": [
             "cef28853-d91d-47cf-affb-3a6da0117073"
           ],
-          "x": 1520.6654,
-          "y": 448.8892,
+          "x": 1128.4448,
+          "y": 454.4447,
           "direction": "left"
         },
         "end": {
@@ -427,8 +427,8 @@
           "columnIds": [
             "ce0aa351-5cd0-469c-87af-27b8c20c2ec9"
           ],
-          "x": 1363.23176953125,
-          "y": 450.5834,
+          "x": 925.45466953125,
+          "y": 456.1389,
           "direction": "right"
         },
         "constraintName": "fk_answers_to_total_question",
@@ -444,8 +444,8 @@
           "columnIds": [
             "e7d1ba44-2222-437b-bcdd-f8f13a8b2c2c"
           ],
-          "x": 794.00796953125,
-          "y": 451.5559,
+          "x": 400.67536953125,
+          "y": 456.0003,
           "direction": "right"
         },
         "end": {
@@ -453,8 +453,8 @@
           "columnIds": [
             "6fea75d2-2904-488a-8cc9-55a72251d449"
           ],
-          "x": 983.5555,
-          "y": 450.5834,
+          "x": 545.7784,
+          "y": 456.1389,
           "direction": "left"
         },
         "constraintName": "fk_questions_to_total_question",
@@ -470,8 +470,8 @@
           "columnIds": [
             "7c62a91b-c25d-4576-90fb-04d2b563ac37"
           ],
-          "x": 1173.393634765625,
-          "y": 515.8334,
+          "x": 735.616534765625,
+          "y": 521.3888999999999,
           "direction": "bottom"
         },
         "end": {
@@ -479,8 +479,8 @@
           "columnIds": [
             "3455c716-cf63-4509-a099-13739858a453"
           ],
-          "x": 1171.89758515625,
-          "y": 664.2211,
+          "x": 737.45368515625,
+          "y": 650.8879,
           "direction": "top"
         },
         "constraintName": "fk_total_question_to_questions_and_answers",
