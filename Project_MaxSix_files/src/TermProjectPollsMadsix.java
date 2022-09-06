@@ -39,34 +39,48 @@ public class TermProjectPollsMadsix {
     }
     
     // 설문 문항 시작
-    public void startPoll() {
+    public void startPoll(Statement stmt) {
         boolean run = true;
         while (run) {
             run = true;
             System.out.println("설문을 시작합니다.\n");
+            System.out.println("-----------------------------------------------------------------------------");
             run = question1();
+            System.out.println("\n-----------------------------------------------------------------------------");
             if (run == false) {
                 System.out.println("\n현재 작성중인 설문을 취소합니다.");
                 break;
             }
             System.out.println();
             run = question2();
+            System.out.println("\n-----------------------------------------------------------------------------");
             if (run == false) {
                 System.out.println("\n현재 작성중인 설문을 취소합니다.");
                 break;
             }
             System.out.println();
             run = question3();
+            System.out.println("\n-----------------------------------------------------------------------------");
             if (run == false) {
                 System.out.println("\n현재 작성중인 설문을 취소합니다.");
                 break;
             }
             System.out.println();
             run = question4();
+            System.out.println("\n-----------------------------------------------------------------------------");
             if (run == false) {
                 System.out.println("\n현재 작성중인 설문을 취소합니다.");
                 break;
             }
+            int val;
+            try {
+                val = stmt.executeUpdate(getInsertSurveyeeQuery());
+                val = stmt.executeUpdate(getInsertQuestionsQuery());
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+            
             System.out.println();
             break;
         }
@@ -160,7 +174,13 @@ public class TermProjectPollsMadsix {
         String query = "INSERT INTO questions (id, question1, question2, question3, question4) " +
                         "VALUES ("+id+", "+ans1+", "+ans2+", "+ans3+", "+ans4+")";
         System.out.println("설문이 정상적으로 등록되었습니다.\n");
+        System.out.println("고객님의 설문번호는 " + id + "번입니다.\n설문 수정 시 필요하니 기억해주세요!");
         return query;
     }
 
+    // 설문 수정
+    public void editPolls() {
+        
+        return ;
+    }
 }

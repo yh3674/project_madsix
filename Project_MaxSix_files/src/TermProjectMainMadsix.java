@@ -21,11 +21,11 @@ public class TermProjectMainMadsix {
         {          
             while(poll) {
                 ResultSet rs;
+                System.out.println("\n-----------------------------------------------------------------------------");
                 System.out.println("메뉴를 선택해주세요.\n");
                 System.out.println("설문: P     통계: S     종료: Q\n");
                 System.out.print("선택 : ");
                 String choice = scan.nextLine();
-                System.out.println();
     
                 switch (choice) {
                     case "p" :
@@ -33,9 +33,7 @@ public class TermProjectMainMadsix {
                         rs = stmt.executeQuery(polls.getNumberQuery());
                         polls.getNumber(rs);
                         polls.getName();
-                        polls.startPoll();
-                        int val = stmt.executeUpdate(polls.getInsertSurveyeeQuery());
-                        val = stmt.executeUpdate(polls.getInsertQuestionsQuery());
+                        polls.startPoll(stmt);
                         break;
                     case "s" : // 통계 메뉴 시작
                     case "S" : // 통계 메뉴 시작
@@ -52,8 +50,8 @@ public class TermProjectMainMadsix {
                                     case 2 : // 문항별 통계 출력하기
                                         stats.questionList();
                                         System.out.print("선택 : ");
-                                        int opt = Integer.parseInt(scan.nextLine()); // INT를 입력, 메뉴 선정
-                                        System.out.println();
+                                        int opt = Integer.parseInt(scan.nextLine());
+                                        System.out.println("\n-----------------------------------------------------------------------------");
                                         switch (opt) {
                                             case 1 : rs = stmt.executeQuery(stats.getQuestion1Query()); // 1번 문항
                                                     stats.pollsQuestion(rs);
@@ -72,8 +70,30 @@ public class TermProjectMainMadsix {
                                                 break;
                                         }
                                         break;
-                                    case 3 : // 그래프로 시각화하기
-    
+                                    case 3 : // 문항별 그래프로 시각화하기
+                                        ResultSet rs2 = stmt.executeQuery(stats.getTotalNumber());
+                                        stats.totalNumber(rs2);
+                                        stats.questionList();
+                                        System.out.print("선택 : ");
+                                        int button = Integer.parseInt(scan.nextLine());
+                                        System.out.println();
+                                        switch (button) {
+                                            case 1 : rs = stmt.executeQuery(stats.getQuestion1Query());
+                                                    stats.statisticsGraph(rs);
+                                                    break;
+                                            case 2 : rs = stmt.executeQuery(stats.getQuestion2Query());
+                                                    stats.statisticsGraph(rs);
+                                                    break;
+                                            case 3 : rs = stmt.executeQuery(stats.getQuestion3Query());
+                                                    stats.statisticsGraph(rs);
+                                                    break;
+                                            case 4 : rs = stmt.executeQuery(stats.getQuestion4Query());
+                                                    stats.statisticsGraph(rs);
+                                                    break;
+                                            case 5 :
+                                                System.out.println("이전 메뉴로 돌아갑니다.\n");
+                                                break;
+                                        }
                                         break;
                                     case 4 : // 이전 메뉴로 돌아가기
                                         System.out.println("이전 메뉴로 돌아갑니다.\n");
@@ -96,7 +116,6 @@ public class TermProjectMainMadsix {
       
    }
 }
-    
 
 
 
